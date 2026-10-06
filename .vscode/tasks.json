@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": {
+          "regexp": "^([^\\s].*):(\\d+|\\d+:\\d+|\\d+:\\d+:\\d+):\\s+(error|warning|info)\\s+(TS\\d+)\\s*:\\s*(.*)$",
+          "file": 1,
+          "location": 2,
+          "severity": 3,
+          "code": 4,
+          "message": 5
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*vite.*|.*MediScanAI.*",
+          "endsPattern": "^.*http://localhost:3000.*|.*running.*"
+        }
+      },
+      "label": "npm: dev",
+      "detail": "Start MediScanAI full-stack development server with Vite HMR",
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$tsc"],
+      "label": "npm: build",
+      "detail": "Build client SPA bundle and server distribution for production"
+    },
+    {
+      "type": "npm",
+      "script": "lint",
+      "group": "test",
+      "problemMatcher": ["$tsc"],
+      "label": "npm: lint",
+      "detail": "Type-check all TypeScript files without emitting output"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "group": "none",
+      "problemMatcher": [],
+      "label": "npm: start",
+      "detail": "Run compiled production server"
+    },
+    {
+      "type": "shell",
+      "command": "npm install",
+      "group": "none",
+      "problemMatcher": [],
+      "label": "npm: install",
+      "detail": "Install all project dependencies"
+    }
+  ]
+}

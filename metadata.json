@@ -1,0 +1,11 @@
+{
+  "name": "MediScanAI – Automated Disease Detection",
+  "description": "Intelligent medical image analysis system utilizing deep learning and explainable AI for chest X-rays, brain MRIs, CT scans, and dermatological images with clinical guidance and doctor review.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
